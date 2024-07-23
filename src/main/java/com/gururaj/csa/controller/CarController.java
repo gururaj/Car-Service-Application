@@ -26,7 +26,7 @@ public class CarController {
 	public CarService carService;
 	
 	@PostMapping("/cars")
-	public ResponseEntity<ResponseStructure<CarResponseDto>> addCarById( CarRequestDto carRequestDto){
+	public ResponseEntity<ResponseStructure<CarResponseDto>> addCarById(@RequestBody CarRequestDto carRequestDto){
 		return carService.addCarById(carRequestDto);
 	}
 	
